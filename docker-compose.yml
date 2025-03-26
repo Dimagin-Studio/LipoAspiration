@@ -1,9 +1,6 @@
 services:
   lipoaspiration:
-    image: lipoaspiration
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: dimagin/lipoaspiration:latest
     networks:
       - traefik-network
     labels:
