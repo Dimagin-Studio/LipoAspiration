@@ -5,9 +5,10 @@ services:
       - traefik-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.lipoaspiration.rule=Host(`lipo.dimagin.studio`)"
+      - "traefik.http.routers.lipoaspiration.rule=Host(`lipo.sonarartists.be`)"
       - "traefik.http.routers.lipoaspiration.entrypoints=websecure"
       - "traefik.http.routers.lipoaspiration.tls=true"
+      - "traefik.http.routers.lipoaspiration.tls.certresolver=cloudflare"
       - "traefik.http.routers.lipoaspiration.service=lipoaspiration"
       - "traefik.http.services.lipoaspiration.loadbalancer.server.port=80"
 
