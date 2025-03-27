@@ -122,11 +122,11 @@ export function Equipe() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-white bg-opacity-90 backdrop-blur-3xl">
-                    <h3 className="text-2xl font-oswald mb-1">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-white/30 backdrop-blur-md bg-opacity-90 ">
+                    <h3 className="text-2xl font-oswald mb-1 text-white">
                       {specialist.name}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-lg font-quicksand text-black max-w-2xl mx-auto">
+                    <p className="text-sm sm:text-base md:text-lg font-quicksand text-white max-w-2xl mx-auto">
                       {specialist.title}
                     </p>
                   </div>

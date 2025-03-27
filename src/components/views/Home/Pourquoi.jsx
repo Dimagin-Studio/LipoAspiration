@@ -1,13 +1,14 @@
 import { Button } from "../../UI/Button";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+
 export function Pourquoi() {
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-24 bg-[#E9EAEB]">
+    <section id="Pourquoi" className="w-full px-4 py-16 sm:py-24 bg-[#E9EAEB]">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-center">
           <div>
-            <Title color="black">POURQUOI CHOISIR LA LIPOSUCCION ?</Title>
+            <Title color="black">POURQUOI CHOISIR LA LIPOSUCCION ?</Title>
             <div className="space-y-6 mb-6">
               <Paragraphe color="black">
                 La liposuccion est la solution idéale pour éliminer

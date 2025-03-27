@@ -4,25 +4,26 @@ export function Contacter() {
   return (
     <section className="container mx-auto px-4 min-h-screen py-16 sm:py-24 font-semibold">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 gap-12">
-          <div className="h-[800px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="h-64 md:h-[800px]">
             <img
-              src="public/images/equipe/member5.jpeg"
+              src="images/equipe/member5.jpeg"
               alt="contact"
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />
           </div>
+
           <div>
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-oswald text-black mb-6">
                 CONTACTEZ-NOUS
               </h2>
               <p className="text-gray-700 font-quicksand font-medium text-xl mb-8">
-                Une question ? Besoin d'un rendez-vous ? Notre équipe est à
+                Une question ? Besoin d’un rendez-vous ? Notre équipe est à
                 votre écoute.
               </p>
               <div className="space-y-6">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex flex-col">
                     <label
                       htmlFor="nom"
@@ -37,6 +38,7 @@ export function Contacter() {
                       className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                     />
                   </div>
+
                   <div className="flex flex-col">
                     <label
                       htmlFor="prenom"
@@ -52,6 +54,7 @@ export function Contacter() {
                     />
                   </div>
                 </div>
+
                 <div className="flex flex-col">
                   <label
                     htmlFor="email"
@@ -66,6 +69,7 @@ export function Contacter() {
                     className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   />
                 </div>
+
                 <div className="flex flex-col">
                   <label
                     htmlFor="telephone"
@@ -80,6 +84,7 @@ export function Contacter() {
                     className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   />
                 </div>
+
                 <div className="flex flex-col">
                   <label
                     htmlFor="sujet"
@@ -88,16 +93,17 @@ export function Contacter() {
                     Sujet
                   </label>
                   <select
-                    name="sjet"
+                    name="sujet"
                     id="sujet"
                     className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
                   >
                     <option value="">Merci de choisir un sujet</option>
-                    <option value="dog">Prise de rendez-vous</option>
-                    <option value="cat">Information</option>
-                    <option value="hamster">Autres</option>
+                    <option value="rendez-vous">Prise de rendez-vous</option>
+                    <option value="information">Information</option>
+                    <option value="autres">Autres</option>
                   </select>
                 </div>
+
                 <div className="flex flex-col">
                   <label
                     htmlFor="message"
@@ -112,6 +118,7 @@ export function Contacter() {
                     className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all resize-none"
                   />
                 </div>
+
                 <Button
                   text="Envoyer"
                   className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-full font-quicksand font-medium text-center flex items-center justify-center"

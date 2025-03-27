@@ -50,11 +50,8 @@ export function Testimonials() {
   };
 
   return (
-    <section
-      id="Resultats"
-      className="container mx-auto px-4 py-16 sm:py-24 bg-[#E9EAEB]"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="Resultats" className="w-full bg-[#E9EAEB] py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
           <div className="mb-6 md:mb-0">
             <Title color="black">DÉROULEMENT DE LA SÉANCE</Title>
@@ -132,9 +129,8 @@ export function Testimonials() {
                   />
 
                   <div className="absolute inset-0 bg-black/30"></div>
-
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="bg-black/40 backdrop-blur-lg p-6 rounded-lg text-white w-full min-h-[180px] flex flex-col justify-center">
+                    <div className="bg-white/40 backdrop-blur-md p-6 rounded-lg text-white w-full min-h-[180px] flex flex-col justify-center">
                       <div className="flex items-baseline gap-2 mb-2">
                         <span className="text-4xl font-oswald">{step.id}.</span>
                         <h3 className="text-2xl font-oswald">{step.title}</h3>

@@ -6,9 +6,9 @@ export function Tarifs() {
   return (
     <section
       id="Price"
-      className="container mx-auto px-4 py-16 sm:py-24 bg-[#E9EAEB] bg-cover bg-center"
+      className="w-full py-16 sm:py-24 bg-[#E9EAEB] bg-cover bg-center"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <Title color="black" className="text-center">
           NOS TARIFS
         </Title>
