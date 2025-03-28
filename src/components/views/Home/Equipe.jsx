@@ -52,7 +52,7 @@ export function Equipe() {
               Des experts à votre écoute pour des résultats parfaits
             </Paragraphe>
           </div>
-          <div className="hidden md:flex gap-4">
+          <div className="hidden lg:flex gap-4">
             <button
               onClick={slideLeft}
               disabled={!canSlideLeft}

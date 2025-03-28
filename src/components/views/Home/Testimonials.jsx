@@ -59,7 +59,7 @@ export function Testimonials() {
               Un processus en 4 étapes pour une transformation en toute sérénité
             </Paragraphe>
           </div>
-          <div className="hidden md:flex gap-4">
+          <div className="hidden md:flex gap-4 ">
             <button
               onClick={slideLeft}
               disabled={!canSlideLeft}
