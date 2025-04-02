@@ -45,7 +45,6 @@ export function Avis() {
             >
               <div className="flex flex-col md:flex-row w-full">
                 <div className="w-full md:w-1/2">
-                  {/* Hauteur limitée en mobile, auto sur desktop */}
                   <img
                     src={`/images/Avis/${testimonial.image}`}
                     alt={`Témoignage de ${testimonial.name}`}

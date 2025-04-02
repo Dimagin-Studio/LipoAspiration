@@ -43,7 +43,6 @@ export function Faq() {
       className="container mx-auto px-4 py-16 sm:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Partie de gauche : même rendu desktop, adapté pour mobile */}
         <div
           className="
             flex flex-col justify-center
@@ -74,7 +73,6 @@ export function Faq() {
           </button>
         </div>
 
-        {/* Partie de droite : FAQ inchangée */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-gray-300">
