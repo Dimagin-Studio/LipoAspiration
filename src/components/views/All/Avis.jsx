@@ -1,5 +1,6 @@
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+
 export function Avis() {
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
@@ -9,6 +10,7 @@ export function Avis() {
       <Paragraphe color="black" className="text-center mb-8 sm:mb-12">
         Découvrez les témoignages de nos patients satisfaits.
       </Paragraphe>
+
       <div className="flex justify-center items-center lg:px-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
           {[
@@ -35,19 +37,22 @@ export function Avis() {
           ].map((testimonial, index) => (
             <article
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex h-full"
+              className="
+                bg-white rounded-lg shadow-lg overflow-hidden
+                flex
+                /* On enlève h-full pour ne plus forcer la hauteur */
+              "
             >
               <div className="flex flex-col md:flex-row w-full">
                 <div className="w-full md:w-1/2">
-                  <div className="h-full">
-                    <img
-                      src={`/images/Avis/${testimonial.image}`}
-                      alt={`Témoignage de ${testimonial.name}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  {/* Hauteur limitée en mobile, auto sur desktop */}
+                  <img
+                    src={`/images/Avis/${testimonial.image}`}
+                    alt={`Témoignage de ${testimonial.name}`}
+                    className="w-full h-48 md:h-auto object-cover"
+                  />
                 </div>
-                <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col justify-center h-full">
+                <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col justify-center">
                   <div className="flex mb-3 sm:mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg

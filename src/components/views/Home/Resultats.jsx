@@ -5,6 +5,15 @@ export function Resultats() {
     <section className="container mx-auto px-4 py-16 sm:py-24">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-center">
+          <div className="flex justify-center">
+            <div className="w-[80%]">
+              <img
+                src="/images/resultats.jpeg"
+                alt="résultats photos"
+                className="rounded-tl-full rounded-tr-full rounded-br-full w-full h-auto object-cover"
+              />
+            </div>
+          </div>
           <div>
             <Title color="black">
               RÉSULTATS : <br />
@@ -27,15 +36,6 @@ export function Resultats() {
                 fois que les tissus traités se sont assouplis et adaptés à leur
                 nouvelle forme.
               </Paragraphe>
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="w-[80%]">
-              <img
-                src="/images/resultats.jpeg"
-                alt="résultats photos"
-                className="rounded-tl-full rounded-tr-full rounded-br-full w-full h-auto object-cover"
-              />
             </div>
           </div>
         </div>

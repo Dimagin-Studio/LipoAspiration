@@ -16,7 +16,6 @@ export function Newsletter() {
     setSuccessMessage("");
 
     const recaptchaValue = recaptchaRef.current.getValue();
-
     if (!recaptchaValue) {
       setErrorMessage("Veuillez vérifier le Captcha.");
       return;
@@ -40,7 +39,6 @@ export function Newsletter() {
       );
 
       const data = await response.json();
-
       if (data.errors) {
         setErrorMessage(data.errors[0]?.message || "Erreur inattendue.");
         return;
@@ -56,44 +54,49 @@ export function Newsletter() {
   };
 
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-24 h-[400px] mb-14">
-      <div className="max-w-6xl mx-auto ">
+    <section className="container mx-auto px-4 py-16 sm:py-24 h-auto sm:h-[400px] mb-14">
+      <div className="max-w-6xl mx-auto">
         <Title color="black" className="text-center">
           Ne manquez aucune info !
         </Title>
+
         <Paragraphe
           color="black"
-          className="text-center w-[50%] mx-auto font-medium"
+          className="text-center w-full sm:w-[50%] mx-auto font-medium"
         >
           Recevez en avant-première nos conseils, actualités, et offres
           exclusives directement dans votre boîte mail.
         </Paragraphe>
 
-        <form
-          className="flex justify-center gap-2 mt-4"
-          onSubmit={handleSubmit}
-        >
-          {errorMessage && <p className="error text-red-500">{errorMessage}</p>}
+        <form className="mt-4" onSubmit={handleSubmit}>
+          {errorMessage && (
+            <p className="error text-red-500 text-center">{errorMessage}</p>
+          )}
           {successMessage && (
-            <p className="success text-green-500">{successMessage}</p>
+            <p className="success text-green-500 text-center">
+              {successMessage}
+            </p>
           )}
 
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            id="email"
-            placeholder="Saisir votre email"
-            className="font-quicksand font-normal px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
-          />
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-2">
+            <input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+              id="email"
+              placeholder="Saisir votre email"
+              className="font-quicksand font-normal px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all w-full sm:w-auto"
+            />
 
-          <button
-            type="submit"
-            className="bg-black text-white font-quicksand px-4 py-2 rounded-full font-medium"
-          >
-            S'abonner
-          </button>
+            <button
+              type="submit"
+              className="bg-black text-white font-quicksand px-4 py-2 rounded-full font-medium w-full sm:w-auto"
+            >
+              S'abonner
+            </button>
+          </div>
         </form>
+
         <ReCAPTCHA
           className="flex justify-center mt-4"
           ref={recaptchaRef}

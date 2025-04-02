@@ -135,7 +135,7 @@ export function Testimonials() {
                         <span className="text-4xl font-oswald">{step.id}.</span>
                         <h3 className="text-2xl font-oswald">{step.title}</h3>
                       </div>
-                      <p className="font-quicksand text-lg text-center md:text-left">
+                      <p className="font-quicksand text-lg text-left">
                         {step.description}
                       </p>
                     </div>

@@ -4,18 +4,16 @@ export function Pourqui() {
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
       <div className="max-w-6xl mx-auto">
-        <Title color="black">LA LIPOSUCCION, POUR QUI ?</Title>
+        <Title color="black">
+          LA LIPOSUCCION, <br />
+          POUR QUI ?
+        </Title>
         <Paragraphe color="black" className="mb-12">
           Cette intervention s'adresse aux personnes souhaitant affiner leur
-          silhouette en
-          <br />
-          ciblant les graisses localisées résistantes aux régimes et à
-          l'exercice. Elle est
-          <br />
-          idéale pour celles et ceux ayant une peau élastique et un poids
-          stable, afin
-          <br />
-          d'obtenir des résultats harmonieux et durables.
+          silhouette en ciblant les graisses localisées résistantes aux régimes
+          et à l'exercice. Elle est idéale pour celles et ceux ayant une peau
+          élastique et un poids stable, afin d'obtenir des résultats harmonieux
+          et durables.
         </Paragraphe>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-20">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+
 export function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -42,20 +43,38 @@ export function Faq() {
       className="container mx-auto px-4 py-16 sm:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="flex flex-col justify-center pl-12">
+        {/* Partie de gauche : même rendu desktop, adapté pour mobile */}
+        <div
+          className="
+            flex flex-col justify-center
+            md:pl-12    /* Conserve le même padding à gauche dès le md breakpoint */
+            px-4       /* Ajout d’un léger padding horizontal sur mobile */
+            text-center md:text-left
+          "
+        >
           <Title color="black">
             VOS QUESTIONS,
             <br />
             NOS RÉPONSES
           </Title>
-          <Paragraphe color="black" className="mt-4">
+
+          <Paragraphe color="black" className="mt-2">
             Tout ce qu’il faut savoir avant de vous lancer !
           </Paragraphe>
-          <button className="font-quicksand text-semibold text-white bg-black p-2 rounded-full w-2/5 mt-6">
+
+          <button
+            className="
+              font-quicksand text-semibold text-white bg-black p-2 rounded-full
+              w-full md:w-2/5   /* Pleine largeur en mobile, 2/5 sur desktop */
+              mt-6
+              mx-auto md:mx-0  /* Centré en mobile, aligné à gauche en desktop */
+            "
+          >
             Parler à un Expert
           </button>
         </div>
 
+        {/* Partie de droite : FAQ inchangée */}
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-gray-300">
