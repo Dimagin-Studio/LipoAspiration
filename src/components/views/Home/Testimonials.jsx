@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -35,7 +36,8 @@ export function Testimonials() {
   ];
 
   const canSlideLeft = currentIndex > 0;
-  const canSlideRight = currentIndex < steps.length - 3;
+  // Seule cette ligne a été changée :
+  const canSlideRight = currentIndex < steps.length - 1;
 
   const slideLeft = () => {
     if (canSlideLeft) {
@@ -119,7 +121,7 @@ export function Testimonials() {
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="w-full md:min-w-[calc(33.333%-2rem)] md:px-4"
+                className="w-full md:min-w-[calc(50%-2rem)] md:px-4"
               >
                 <div className="relative h-[500px] rounded-2xl overflow-hidden">
                   <img
@@ -127,7 +129,6 @@ export function Testimonials() {
                     alt={step.title}
                     className="w-full h-full object-cover"
                   />
-
                   <div className="absolute inset-0 bg-black/30"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="bg-white/40 backdrop-blur-md p-6 rounded-lg text-white w-full min-h-[180px] flex flex-col justify-center">

@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+
 export function Resultats() {
+  const [showSecondPara, setShowSecondPara] = useState(false);
+
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
       <div className="max-w-6xl mx-auto">
@@ -22,6 +26,7 @@ export function Resultats() {
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-oswald text-black mb-6">
               Des contours redéfinis, un corps harmonisé
             </h3>
+
             <div className="space-y-6">
               <Paragraphe color="black">
                 Après l'intervention, il faut quelques semaines pour que la peau
@@ -30,12 +35,31 @@ export function Resultats() {
                 recommandé jour et nuit pendant 2 à 6 semaines selon les
                 conseils du chirurgien.
               </Paragraphe>
-              <Paragraphe color="black">
+
+              <Paragraphe color="black" className="hidden md:block">
                 Les premiers changements sont visibles rapidement, mais le
                 résultat définitif s'apprécie pleinement après 2 à 3 mois, une
                 fois que les tissus traités se sont assouplis et adaptés à leur
                 nouvelle forme.
               </Paragraphe>
+
+              <div className="md:hidden">
+                {showSecondPara ? (
+                  <Paragraphe color="black">
+                    Les premiers changements sont visibles rapidement, mais le
+                    résultat définitif s'apprécie pleinement après 2 à 3 mois,
+                    une fois que les tissus traités se sont assouplis et adaptés
+                    à leur nouvelle forme.
+                  </Paragraphe>
+                ) : (
+                  <button
+                    className="text-blue-600 underline"
+                    onClick={() => setShowSecondPara(true)}
+                  >
+                    Voir plus
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>

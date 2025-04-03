@@ -27,20 +27,20 @@ export function Equipe() {
     },
   ];
 
-  const canSlideLeft = currentIndex > 0;
-  const canSlideRight = currentIndex < specialists.length - 3;
+  // const canSlideLeft = currentIndex > 0;
+  // const canSlideRight = currentIndex < specialists.length - 3;
 
-  const slideLeft = () => {
-    if (canSlideLeft) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
+  // const slideLeft = () => {
+  //   if (canSlideLeft) {
+  //     setCurrentIndex(currentIndex - 1);
+  //   }
+  // };
 
-  const slideRight = () => {
-    if (canSlideRight) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
+  // const slideRight = () => {
+  //   if (canSlideRight) {
+  //     setCurrentIndex(currentIndex + 1);
+  //   }
+  // };
 
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
@@ -52,7 +52,8 @@ export function Equipe() {
               Des experts à votre écoute pour des résultats parfaits
             </Paragraphe>
           </div>
-          <div className="hidden lg:flex gap-4">
+          {/* A VOIR POUR LES FLECHES DE NAVIGATION ENTRE LES IMAGES */}
+          {/* <div className="invisible lg:visible flex gap-4">
             <button
               onClick={slideLeft}
               disabled={!canSlideLeft}
@@ -99,7 +100,7 @@ export function Equipe() {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="md:overflow-visible">
@@ -112,7 +113,7 @@ export function Equipe() {
             {specialists.map((specialist, index) => (
               <div
                 key={index}
-                className="w-full md:min-w-[calc(33.333%-2rem)] md:px-4"
+                className="w-full md:min-w-[calc(25%-2rem)] md:px-4"
               >
                 <div className="relative rounded-2xl overflow-hidden bg-gray-200">
                   <div className="aspect-[4/5]">
