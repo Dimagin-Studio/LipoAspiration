@@ -5,12 +5,25 @@ import {
   FaTiktok,
   FaXTwitter,
 } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 export function Footer() {
+  const columns = [
+    "Transformez votre corps avec des experts en liposuccion...",
+    "Liens",
+    "Infos",
+    "Adresses",
+  ];
+
   return (
-    <footer className="bg-black text-white py-16 sm:py-24 font-quicksand font-medium ">
+    <footer className="bg-black text-white py-16 sm:py-24 font-quicksand font-medium">
       <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0 }}
+        >
           <div className="mb-4">
             <img
               src="/images/lotus.png"
@@ -31,71 +44,58 @@ export function Footer() {
               <span className="text-xs">2.000+ avis</span>
             </div>
           </div>
-        </div>
-
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+        >
           <h3 className="text-white font-semibold mb-4">Liens</h3>
-          <ul className="space-y-2 text-gray-400 text-sm ">
-            <li>
-              <a href="#" className="hover:text-white">
-                À propos
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Avant / Après
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Indications
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Nos prix
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                FAQS
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Clients
-              </a>
-            </li>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            {[
+              "À propos",
+              "Avant / Après",
+              "Indications",
+              "Nos prix",
+              "FAQS",
+              "Clients",
+            ].map((link, i) => (
+              <li key={i}>
+                <a href="#" className="hover:text-white">
+                  {link}
+                </a>
+              </li>
+            ))}
           </ul>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+        >
           <h3 className="text-white font-semibold mb-4">Infos</h3>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>
-              <a href="#" className="hover:text-white">
-                Mentions légales
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Vie privée
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Paiement
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-white">
-                Contact
-              </a>
-            </li>
+            {["Mentions légales", "Vie privée", "Paiement", "Contact"].map(
+              (link, i) => (
+                <li key={i}>
+                  <a href="#" className="hover:text-white">
+                    {link}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+        >
           <h3 className="text-white font-semibold mb-4">Adresses</h3>
           <div className="text-gray-400 text-sm mb-4">
             <p className="font-bold text-white">
@@ -109,48 +109,28 @@ export function Footer() {
             </p>
             <p>120 Avenue de la République, 69003 Lyon, France</p>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="border-t border-gray-700 mt-12 pt-6 px-4 flex flex-col sm:flex-row items-center justify-between">
         <p className="text-sm text-gray-500">© 2025 - LIPOASPIRATION.BE</p>
         <p className="text-sm text-gray-500">Design & developed by Dimagin</p>
+
         <div className="flex space-x-4 mt-4 sm:mt-0">
-          <a
-            href="#"
-            aria-label="Instagram"
-            className="text-gray-400 hover:text-white"
-          >
-            <FaInstagram size={20} />
-          </a>
-          <a
-            href="#"
-            aria-label="Pinterest"
-            className="text-gray-400 hover:text-white"
-          >
-            <FaPinterest size={20} />
-          </a>
-          <a
-            href="#"
-            aria-label="Facebook"
-            className="text-gray-400 hover:text-white"
-          >
-            <FaFacebookF size={20} />
-          </a>
-          <a
-            href="#"
-            aria-label="TikTok"
-            className="text-gray-400 hover:text-white"
-          >
-            <FaTiktok size={20} />
-          </a>
-          <a
-            href="#"
-            aria-label="X / Twitter"
-            className="text-gray-400 hover:text-white"
-          >
-            <FaXTwitter size={20} />
-          </a>
+          {[FaInstagram, FaPinterest, FaFacebookF, FaTiktok, FaXTwitter].map(
+            (Icon, index) => (
+              <motion.a
+                key={index}
+                href="#"
+                aria-label="social"
+                className="text-gray-400 hover:text-white"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Icon size={20} />
+              </motion.a>
+            )
+          )}
         </div>
       </div>
     </footer>

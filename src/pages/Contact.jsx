@@ -4,6 +4,7 @@ import { Avis } from "../components/views/All/Avis";
 import { Footer } from "../components/Footer/Footer";
 import { Intervention } from "../components/views/All/Intervention";
 import { Newsletter } from "../components/views/All/Newsletter";
+import { BackToTop } from "../components/UI/BackToTop";
 
 export function Contact() {
   return (

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+import "animate.css";
 
 export function Zone() {
   const zones = [
@@ -9,36 +11,12 @@ export function Zone() {
       name: "VENTRE & ABDOMEN",
       image: "/images/Zone/ventre.jpeg",
     },
-    {
-      id: "hanches",
-      name: "HANCHES",
-      image: "/images/Zone/hanche.jpeg",
-    },
-    {
-      id: "cuisses",
-      name: "CUISSES",
-      image: "/images/Zone/cuisse.jpeg",
-    },
-    {
-      id: "fesses",
-      name: "FESSES",
-      image: "/images/Zone/fesse.jpeg",
-    },
-    {
-      id: "dos",
-      name: "DOS",
-      image: "/images/Zone/dos.jpeg",
-    },
-    {
-      id: "bras",
-      name: "BRAS",
-      image: "/images/Zone/bras.jpeg",
-    },
-    {
-      id: "genoux",
-      name: "GENOUX",
-      image: "/images/Zone/jambe.jpeg",
-    },
+    { id: "hanches", name: "HANCHES", image: "/images/Zone/hanche.jpeg" },
+    { id: "cuisses", name: "CUISSES", image: "/images/Zone/cuisse.jpeg" },
+    { id: "fesses", name: "FESSES", image: "/images/Zone/fesse.jpeg" },
+    { id: "dos", name: "DOS", image: "/images/Zone/dos.jpeg" },
+    { id: "bras", name: "BRAS", image: "/images/Zone/bras.jpeg" },
+    { id: "genoux", name: "GENOUX", image: "/images/Zone/jambe.jpeg" },
   ];
 
   const [selectedZone, setSelectedZone] = useState(zones[0]);
@@ -82,7 +60,17 @@ export function Zone() {
         <div className="absolute inset-0 bg-black/30 transition-opacity duration-700"></div>
       </div>
 
-      <div className="relative h-full container mx-auto px-4 flex flex-col justify-center">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 50 },
+        }}
+        className="relative h-full container mx-auto px-4 flex flex-col justify-center"
+      >
         <div className="max-w-6xl mx-auto">
           <div className="md:w-1/2">
             <Title color="white">
@@ -99,7 +87,7 @@ export function Zone() {
             </Paragraphe>
           </div>
 
-          <div className="flex flex-wrap md:flex-nowrap justify-start gap-4">
+          <div className="flex flex-wrap md:flex-nowrap justify-start gap-4 animate__animated animate__fadeInUp">
             {zones.map((zone) => (
               <button
                 key={zone.id}
@@ -124,7 +112,7 @@ export function Zone() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

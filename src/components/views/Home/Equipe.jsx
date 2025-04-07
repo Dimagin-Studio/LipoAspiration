@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+import { motion } from "framer-motion";
+
 export function Equipe() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,81 +29,23 @@ export function Equipe() {
     },
   ];
 
-  // const canSlideLeft = currentIndex > 0;
-  // const canSlideRight = currentIndex < specialists.length - 3;
-
-  // const slideLeft = () => {
-  //   if (canSlideLeft) {
-  //     setCurrentIndex(currentIndex - 1);
-  //   }
-  // };
-
-  // const slideRight = () => {
-  //   if (canSlideRight) {
-  //     setCurrentIndex(currentIndex + 1);
-  //   }
-  // };
-
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+        <motion.div
+          className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
           <div className="mb-6 md:mb-0">
             <Title color="black">NOTRE ÉQUIPE DE SPÉCIALISTES </Title>
             <Paragraphe color="black">
               Des experts à votre écoute pour des résultats parfaits
             </Paragraphe>
           </div>
-          {/* A VOIR POUR LES FLECHES DE NAVIGATION ENTRE LES IMAGES */}
-          {/* <div className="invisible lg:visible flex gap-4">
-            <button
-              onClick={slideLeft}
-              disabled={!canSlideLeft}
-              className={`p-2 rounded-full border transition-colors ${
-                canSlideLeft
-                  ? "border-gray-300 hover:bg-gray-100 text-gray-800"
-                  : "border-gray-200 text-gray-400 cursor-not-allowed"
-              }`}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
-            <button
-              onClick={slideRight}
-              disabled={!canSlideRight}
-              className={`p-2 rounded-full border transition-colors ${
-                canSlideRight
-                  ? "border-gray-300 hover:bg-gray-100 text-gray-800"
-                  : "border-gray-200 text-gray-400 cursor-not-allowed"
-              }`}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div> */}
-        </div>
+        </motion.div>
 
         <div className="md:overflow-visible">
           <div
@@ -111,8 +55,17 @@ export function Equipe() {
             }}
           >
             {specialists.map((specialist, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                whileHover={{ scale: 1.03, y: -4 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeInOut",
+                  delay: index * 0.1,
+                }}
                 className="w-full md:min-w-[calc(25%-2rem)] md:px-4"
               >
                 <div className="relative rounded-2xl overflow-hidden bg-gray-200">
@@ -123,7 +76,7 @@ export function Equipe() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-white/30 backdrop-blur-md bg-opacity-90 ">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-white/30 backdrop-blur-md bg-opacity-90 min-h-[135px]">
                     <h3 className="text-2xl font-oswald mb-1 text-white">
                       {specialist.name}
                     </h3>
@@ -132,7 +85,7 @@ export function Equipe() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

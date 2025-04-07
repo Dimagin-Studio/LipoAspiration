@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -13,23 +14,24 @@ export function Faq() {
     },
     {
       question: "Combien de temps pour récupérer ?",
-      answer: "lorem ipsum dolor sit amet",
+      answer:
+        "La récupération prend environ 1 à 2 semaines pour les activités légères.",
     },
     {
       question: "Les résultats sont-ils définitifs ?",
-      answer: "lorem ipsum dolor sit amet",
+      answer: "Oui, à condition de maintenir un mode de vie sain.",
     },
     {
       question: "À quel âge peut-on faire une liposuccion ?",
-      answer: "lorem ipsum dolor sit amet",
+      answer: "À partir de 18 ans, sous réserve d’un bon état de santé.",
     },
     {
       question: "Les cicatrices sont-elles visibles ?",
-      answer: "lorem ipsum dolor sit amet",
+      answer: "Elles sont discrètes et placées dans des zones peu visibles.",
     },
     {
       question: "Quand reprendre le sport ?",
-      answer: "lorem ipsum dolor sit amet",
+      answer: "Généralement après 4 à 6 semaines, selon avis médical.",
     },
   ];
 
@@ -43,13 +45,12 @@ export function Faq() {
       className="container mx-auto px-4 py-16 sm:py-24 bg-white"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div
-          className="
-            flex flex-col justify-center
-            md:pl-12    /* Conserve le même padding à gauche dès le md breakpoint */
-            px-4       /* Ajout d’un léger padding horizontal sur mobile */
-            text-center md:text-left
-          "
+        <motion.div
+          className="flex flex-col justify-center md:pl-12 px-4 text-center md:text-left"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <Title color="black">
             VOS QUESTIONS,
@@ -61,21 +62,32 @@ export function Faq() {
             Tout ce qu’il faut savoir avant de vous lancer !
           </Paragraphe>
 
-          <button
-            className="
-              font-quicksand text-semibold text-white bg-black p-2 rounded-full
-              w-full md:w-2/5   /* Pleine largeur en mobile, 2/5 sur desktop */
-              mt-6
-              mx-auto md:mx-0  /* Centré en mobile, aligné à gauche en desktop */
-            "
+          <motion.button
+            className="font-quicksand text-semibold text-white bg-black p-2 rounded-full w-full md:w-2/5 mt-6 mx-auto md:mx-0"
+            whileHover={{ scale: 1.03 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
           >
             Parler à un Expert
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
-        <div className="space-y-4">
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        >
           {faqs.map((faq, index) => (
-            <div key={index} className="border-b border-gray-300">
+            <motion.div
+              key={index}
+              layout
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 0.3, delay: 0.1 * index }}
+              className="border-b border-gray-300"
+            >
               <button
                 className="w-full flex justify-between items-center py-4 text-left text-lg font-quicksand text-black"
                 onClick={() => toggleFaq(index)}
@@ -109,14 +121,23 @@ export function Faq() {
                   </svg>
                 )}
               </button>
-              {openIndex === index && (
-                <p className="text-gray-600 font-quicksand pb-4">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.p
+                    key="content"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="text-gray-600 font-quicksand pb-4"
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

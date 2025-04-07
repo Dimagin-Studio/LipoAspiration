@@ -1,9 +1,13 @@
 import { Button } from "../UI/Button";
+import { motion } from "framer-motion";
 
 export function Header({ className = "", color = "white" }) {
   return (
-    <header
+    <motion.header
       className={`flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 ${className}`}
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <a href="/" className="flex-shrink-0">
         <img
@@ -12,6 +16,7 @@ export function Header({ className = "", color = "white" }) {
           className="w-[80px] sm:w-[100px]"
         />
       </a>
+
       <nav className="hidden md:flex flex-1 items-center font-normal">
         <div className="flex-1 flex justify-center">
           <ul
@@ -45,7 +50,7 @@ export function Header({ className = "", color = "white" }) {
                 href="/#Resultats"
                 className="hover:text-gray-300 transition-colors"
               >
-                Comment ca marche ?
+                Comment ça marche ?
               </a>
             </li>
             <li>
@@ -71,29 +76,9 @@ export function Header({ className = "", color = "white" }) {
             </li>
           </ul>
         </div>
+
         <Button text="Prendre Rendez-vous" />
       </nav>
-
-      <button
-        className={`md:hidden ${
-          color === "black" ? "text-black" : "text-white"
-        }`}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
-    </header>
+    </motion.header>
   );
 }

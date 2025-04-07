@@ -14,6 +14,7 @@ import { Avis } from "../components/views/All/Avis";
 import { Cta } from "../components/views/Home/Cta";
 import { Footer } from "../components/Footer/Footer";
 import { Newsletter } from "../components/views/All/Newsletter";
+import { BackToTop } from "../components/UI/BackToTop";
 
 export function Home() {
   return (

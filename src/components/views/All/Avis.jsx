@@ -1,15 +1,23 @@
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+import { motion } from "framer-motion";
 
 export function Avis() {
   return (
     <section className="container mx-auto px-4 py-16 sm:py-24">
-      <Title color="black" className="text-center">
-        ILS NOUS ONT FAIT CONFIANCE
-      </Title>
-      <Paragraphe color="black" className="text-center mb-8 sm:mb-12">
-        Découvrez les témoignages de nos patients satisfaits.
-      </Paragraphe>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <Title color="black" className="text-center">
+          ILS NOUS ONT FAIT CONFIANCE
+        </Title>
+        <Paragraphe color="black" className="text-center mb-8 sm:mb-12">
+          Découvrez les témoignages de nos patients satisfaits.
+        </Paragraphe>
+      </motion.div>
 
       <div className="flex justify-center items-center lg:px-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full">
@@ -35,13 +43,18 @@ export function Avis() {
               image: "temoin4.jpeg",
             },
           ].map((testimonial, index) => (
-            <article
+            <motion.article
               key={index}
-              className="
-                bg-white rounded-lg shadow-lg overflow-hidden
-                flex
-                /* On enlève h-full pour ne plus forcer la hauteur */
-              "
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.02, y: -4 }}
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{
+                duration: 0.4,
+                ease: "easeInOut",
+                delay: index * 0.1,
+              }}
+              className="bg-white rounded-lg shadow-lg overflow-hidden flex"
             >
               <div className="flex flex-col md:flex-row w-full">
                 <div className="w-full md:w-1/2">
@@ -71,7 +84,7 @@ export function Avis() {
                   </Paragraphe>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

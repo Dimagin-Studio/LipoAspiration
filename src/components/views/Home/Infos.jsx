@@ -1,16 +1,16 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
+import "animate.css";
+
 export function Infos() {
   const images = [
     {
       src: "/images/avantaprès.png",
       alt: "Avant et après liposuccion abdominale",
     },
-    {
-      src: "/images/hero.jpeg",
-      alt: "Avant et après liposuccion des cuisses",
-    },
+    { src: "/images/hero.jpeg", alt: "Avant et après liposuccion des cuisses" },
     {
       src: "/images/avantaprès.png",
       alt: "Avant et après liposuccion des bras",
@@ -34,10 +34,21 @@ export function Infos() {
 
   return (
     <section id="Apropos" className="container mx-auto px-4 py-16 sm:py-24">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:gap-12 lg:gap-20">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        variants={{
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 50 },
+        }}
+        className="max-w-6xl mx-auto flex flex-col md:flex-row md:gap-12 lg:gap-20"
+      >
         <div className="md:w-1/3">
           <Title color="black">LA LIPOSUCCION</Title>
         </div>
+
         <div className="md:w-2/3 space-y-8">
           <div className="space-y-6 text-gray-700 font-quicksand text-lg">
             <Paragraphe color="black">
@@ -49,6 +60,7 @@ export function Infos() {
               traditionnelles comme le régime alimentaire et l'exercice
               physique.
             </Paragraphe>
+
             <Paragraphe color="black" className="hidden md:block">
               Initialement développée dans les années 1970, la liposuccion a
               considérablement évolué au fil des ans. Les techniques de
@@ -84,21 +96,33 @@ export function Infos() {
             </div>
           </div>
 
-          <div className="space-y-4" id="Avantapres">
-            <div className="relative w-full h-[400px] rounded-lg overflow-hidden">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            className="space-y-4"
+            id="Avantapres"
+          >
+            <div className="relative w-full h-[400px] rounded-lg overflow-hidden animate__animated animate__fadeIn">
               <img
                 src={images[currentIndex].src}
                 alt={images[currentIndex].alt}
                 className="w-full h-full object-cover"
               />
-              <div className="absolute top-4 left-4 bg-white/80 px-4 py-1 rounded font-quicksand">
+              <div className="absolute top-4 left-4 bg-white/80 px-4 py-1 rounded font-quicksand animate__animated animate__fadeInLeft">
                 Avant
               </div>
-              <div className="absolute top-4 right-4 bg-white/80 px-4 py-1 rounded font-quicksand">
+              <div className="absolute top-4 right-4 bg-white/80 px-4 py-1 rounded font-quicksand animate__animated animate__fadeInRight">
                 Après
               </div>
             </div>
-            <div className="flex justify-start gap-4">
+
+            <div className="flex justify-start gap-4 animate__animated animate__fadeInUp">
               <button
                 onClick={goToPrevious}
                 className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center"
@@ -118,6 +142,7 @@ export function Infos() {
                   />
                 </svg>
               </button>
+
               <button
                 onClick={goToNext}
                 className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center"
@@ -138,9 +163,9 @@ export function Infos() {
                 </svg>
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
