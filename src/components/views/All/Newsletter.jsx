@@ -74,7 +74,7 @@ export function Newsletter() {
           exclusives directement dans votre boîte mail.
         </Paragraphe>
 
-        <form className="mt-4" onSubmit={handleSubmit}>
+        <form className="mt-10" onSubmit={handleSubmit}>
           {errorMessage && (
             <p className="error text-red-500 text-center">{errorMessage}</p>
           )}
@@ -84,21 +84,30 @@ export function Newsletter() {
             </p>
           )}
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 mt-2">
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              id="email"
-              placeholder="Saisir votre email"
-              className="font-quicksand font-normal px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all w-full sm:w-auto"
-            />
+          <div className="flex flex-col sm:flex-row justify-center items-start sm:items-end gap-4 mt-6">
+            {/* Label visible */}
+            <div className="w-full sm:w-auto flex flex-col">
+              <label
+                htmlFor="email"
+                className="mb-1 text-black font-quicksand font-semibold"
+              >
+                Votre adresse e-mail
+              </label>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                id="email"
+                placeholder="ex : nom@email.com"
+                className="font-quicksand font-normal px-5 py-3 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all shadow-sm w-full sm:min-w-[300px]"
+              />
+            </div>
 
             <motion.button
               type="submit"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="bg-black text-white font-quicksand px-4 py-2 rounded-full font-medium w-full sm:w-auto"
+              className="bg-black text-white font-quicksand px-6 py-3 rounded-full font-medium w-full sm:w-auto text-lg"
             >
               S'abonner
             </motion.button>

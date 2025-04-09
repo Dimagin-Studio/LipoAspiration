@@ -54,36 +54,33 @@ export function Avis() {
                 ease: "easeInOut",
                 delay: index * 0.1,
               }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex"
+              className="bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col items-center text-center p-6"
             >
-              <div className="flex flex-col md:flex-row w-full">
-                <div className="w-full md:w-1/2">
-                  <img
-                    src={`/images/Avis/${testimonial.image}`}
-                    alt={`Témoignage de ${testimonial.name}`}
-                    className="w-full h-48 md:h-auto object-cover"
-                  />
-                </div>
-                <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col justify-center">
-                  <div className="flex mb-3 sm:mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg
-                        key={i}
-                        className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 fill-current"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <Paragraphe color="black" className="mb-3 sm:mb-4">
-                    "{testimonial.text}"
-                  </Paragraphe>
-                  <Paragraphe color="black" className="font-medium">
-                    - {testimonial.name}
-                  </Paragraphe>
-                </div>
+              <div className="mb-4">
+                <img
+                  src={`/images/Avis/${testimonial.image}`}
+                  alt={`Témoignage de ${testimonial.name}`}
+                  className="w-24 h-24 rounded-full object-cover mx-auto border-4 border-white shadow-md"
+                />
               </div>
+
+              <div className="flex justify-center mb-3 sm:mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 fill-current"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                  </svg>
+                ))}
+              </div>
+              <Paragraphe color="black" className="mb-3 sm:mb-4">
+                "{testimonial.text}"
+              </Paragraphe>
+              <Paragraphe color="black" className="font-medium">
+                - {testimonial.name}
+              </Paragraphe>
             </motion.article>
           ))}
         </div>

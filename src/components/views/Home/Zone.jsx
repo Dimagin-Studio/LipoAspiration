@@ -10,13 +10,51 @@ export function Zone() {
       id: "ventre",
       name: "VENTRE & ABDOMEN",
       image: "/images/Zone/ventre.jpeg",
+      description:
+        "Le ventre et l'abdomen sont souvent sujets aux amas graisseux. La liposuccion permet de retrouver une silhouette affinée et harmonieuse.",
     },
-    { id: "hanches", name: "HANCHES", image: "/images/Zone/hanche.jpeg" },
-    { id: "cuisses", name: "CUISSES", image: "/images/Zone/cuisse.jpeg" },
-    { id: "fesses", name: "FESSES", image: "/images/Zone/fesse.jpeg" },
-    { id: "dos", name: "DOS", image: "/images/Zone/dos.jpeg" },
-    { id: "bras", name: "BRAS", image: "/images/Zone/bras.jpeg" },
-    { id: "genoux", name: "GENOUX", image: "/images/Zone/jambe.jpeg" },
+    {
+      id: "hanches",
+      name: "HANCHES",
+      image: "/images/Zone/hanche.jpeg",
+      description:
+        "Les poignées d'amour situées sur les hanches peuvent être traitées efficacement pour redéfinir les courbes du corps.",
+    },
+    {
+      id: "cuisses",
+      name: "CUISSES",
+      image: "/images/Zone/cuisse.jpeg",
+      description:
+        "Que ce soit la face interne ou externe, la liposuccion des cuisses améliore le galbe et l'harmonie des jambes.",
+    },
+    {
+      id: "fesses",
+      name: "FESSES",
+      image: "/images/Zone/fesse.jpeg",
+      description:
+        "La liposuccion permet d'affiner les fesses sans compromettre leur volume naturel, pour un rendu plus ferme.",
+    },
+    {
+      id: "dos",
+      name: "DOS",
+      image: "/images/Zone/dos.jpeg",
+      description:
+        "Les bourrelets du dos peuvent être ciblés pour une silhouette plus lisse, surtout sous les vêtements ajustés.",
+    },
+    {
+      id: "bras",
+      name: "BRAS",
+      image: "/images/Zone/bras.jpeg",
+      description:
+        "La liposuccion des bras supprime l'effet 'bras tombants' et redonne du tonus au haut du corps.",
+    },
+    {
+      id: "genoux",
+      name: "GENOUX",
+      image: "/images/Zone/jambe.jpeg",
+      description:
+        "Affiner la zone autour des genoux contribue à une ligne de jambe plus harmonieuse et plus élégante.",
+    },
   ];
 
   const [selectedZone, setSelectedZone] = useState(zones[0]);
@@ -79,11 +117,8 @@ export function Zone() {
               <br />
               SILHOUETTE
             </Title>
-            <Paragraphe color="white" className="mb-12 max-w-3xl">
-              La liposuccion permet de traiter avec précision les amas graisseux
-              tenaces pour harmoniser votre silhouette. Certaines zones sont
-              particulièrement propices à cette intervention pour des résultats
-              visibles et durables.
+            <Paragraphe color="white" className="mb-6 max-w-3xl">
+              {selectedZone.description}
             </Paragraphe>
           </div>
 

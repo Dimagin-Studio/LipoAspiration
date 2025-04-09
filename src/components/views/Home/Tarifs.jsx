@@ -24,7 +24,7 @@ export function Tarifs() {
           </Paragraphe>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center">
+        <div className="justify-items-center">
           {[
             {
               title: "Essentielle",
@@ -35,28 +35,6 @@ export function Tarifs() {
                 "Consultation pré-opératoire incluse",
                 "Anésthésie locale",
                 "Suivi post-opératoire",
-              ],
-            },
-            {
-              title: "Silhouette",
-              price: "4500 €",
-              description: "Un remodelage harmonieux sur plusieurs zones.",
-              items: [
-                "Traitement de 2 à 3 zones",
-                "Anesthésie générale",
-                "Hospitalisation ambulatoire",
-                "Suivi personnalisé",
-              ],
-            },
-            {
-              title: "Premium",
-              price: "6500 €",
-              description: "Résultats optimaux avec un accompagnement complet.",
-              items: [
-                "Traitement de plusieurs zones",
-                "Séjour en clinique inclus",
-                "Vêtements de contention fournis",
-                "Suivi médical renforcé",
               ],
             },
           ].map((box, index) => (
@@ -73,36 +51,32 @@ export function Tarifs() {
                 ease: "easeInOut",
                 delay: index * 0.2,
               }}
-              className="w-full max-w-[405px] bg-white p-8 rounded-2xl shadow-lg cursor-pointer transition-transform"
+              className="w-full bg-white p-10 rounded-2xl shadow-lg cursor-pointer transition-transform flex flex-col items-center text-center"
             >
-              <h4 className="font-oswald text-2xl mb-6">{box.title}</h4>
-              <div className="flex justify-between items-baseline mb-8">
-                <Paragraphe
-                  color="black"
-                  className="text-lg font-quicksand font-medium"
-                >
-                  À partir de{" "}
-                  <span className="font-quicksand text-4xl text-black ml-1 font-semibold">
-                    {box.price}
-                  </span>
-                </Paragraphe>
-              </div>
+              <h4 className="font-oswald text-3xl mb-4 text-black">
+                {box.title}
+              </h4>
               <Paragraphe
                 color="black"
-                className="mb-8 font-quicksand font-medium"
+                className="text-lg font-quicksand font-medium mb-2"
+              >
+                À partir de
+              </Paragraphe>
+              <span className="text-5xl font-semibold font-quicksand text-black mb-6">
+                {box.price}
+              </span>
+              <Paragraphe
+                color="black"
+                className="text-base font-quicksand font-medium mb-6 leading-relaxed max-w-xl"
               >
                 {box.description}
               </Paragraphe>
-              <div className="flex flex-col space-y-4">
-                <Button
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-full font-quicksand font-medium text-center flex items-center justify-center"
-                  text="Prendre Rendez-Vous"
-                />
-                <hr className="border-gray-200" />
-              </div>
-              <ul className="space-y-4 mt-6">
+
+              <hr className="border-gray-200 w-full mb-6" />
+              <ul className="flex flex-col items-start gap-4 w-full mb-8 sm:flex-wrap sm:flex-row sm:justify-center sm:gap-6">
+                {" "}
                 {box.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
+                  <li key={i} className="flex items-center gap-3">
                     <svg
                       className="w-6 h-6 text-blue-500 flex-shrink-0"
                       viewBox="0 0 24 24"
@@ -110,12 +84,18 @@ export function Tarifs() {
                     >
                       <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z" />
                     </svg>
-                    <span className="font-quicksand font-medium text-lg">
+                    <span className="font-quicksand text-lg font-medium leading-snug text-left break-words">
                       {item}
                     </span>
                   </li>
                 ))}
               </ul>
+
+              <hr className="border-gray-200 w-full mb-6" />
+              <Button
+                className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-quicksand font-medium text-lg"
+                text="Prendre Rendez-Vous"
+              />
             </motion.article>
           ))}
         </div>

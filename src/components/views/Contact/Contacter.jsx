@@ -6,7 +6,7 @@ export function Contacter() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div
-            className="h-64 md:h-[800px]"
+            className="h-full"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.2 }}
@@ -112,6 +112,25 @@ export function Contacter() {
                     <option value="rendez-vous">Prise de rendez-vous</option>
                     <option value="information">Information</option>
                     <option value="autres">Autres</option>
+                  </select>
+                </div>
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="lieux"
+                    className="text-gray-700 font-medium mb-2 font-quicksand"
+                  >
+                    Lieux d'intervention
+                  </label>
+                  <select
+                    name="lieux"
+                    id="lieux"
+                    className="font-quicksand px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                  >
+                    <option value="">
+                      Merci de choisir un lieu d'intervention
+                    </option>
+                    <option value="rendez-vous">Paris</option>
+                    <option value="information">Lyon</option>
                   </select>
                 </div>
 

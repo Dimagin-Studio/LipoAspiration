@@ -72,8 +72,8 @@ export function Infos() {
               excédentaires, qui ne réapparaîtront pas.
             </Paragraphe>
 
-            <div className="md:hidden">
-              {showSecondPara ? (
+            <div className="md:hidden space-y-4">
+              {showSecondPara && (
                 <Paragraphe color="black">
                   Initialement développée dans les années 1970, la liposuccion a
                   considérablement évolué au fil des ans. Les techniques de
@@ -85,14 +85,13 @@ export function Infos() {
                   graisseuses localisées et excédentaires, qui ne réapparaîtront
                   pas.
                 </Paragraphe>
-              ) : (
-                <button
-                  className="text-blue-600 underline"
-                  onClick={() => setShowSecondPara(true)}
-                >
-                  Voir plus
-                </button>
               )}
+              <button
+                onClick={() => setShowSecondPara((prev) => !prev)}
+                className="bg-blue-600 text-white font-quicksand px-4 py-2 rounded-full transition-colors hover:bg-blue-700"
+              >
+                {showSecondPara ? "Voir moins" : "Voir plus"}
+              </button>
             </div>
           </div>
 

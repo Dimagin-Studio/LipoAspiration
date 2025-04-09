@@ -9,27 +9,27 @@ export function Testimonials() {
   const steps = [
     {
       id: 1,
-      title: "Consultation",
+      title: "Prise de contact / Avis",
       description:
         "Évaluation personnalisée, informations détaillées et plan de traitement sur mesure.",
       image: "/images/testimonials/etape1.jpeg",
     },
     {
       id: 2,
-      title: "Intervention",
+      title: "Consultation pré-opératoire",
       description:
         "Incisions discrètes, aspiration ciblée des graisses sous anesthésie.",
       image: "/images/testimonials/etape2.jpeg",
     },
     {
       id: 3,
-      title: "Réveil",
+      title: "Intervention",
       description: "Observation post-opératoire et retour à domicile.",
       image: "/images/testimonials/etape3.jpeg",
     },
     {
       id: 4,
-      title: "Suivi",
+      title: "Consultation de suivi",
       description:
         "Accompagnement personnalisé et suivi régulier pour des résultats optimaux.",
       image: "/images/testimonials/etape4.jpg",

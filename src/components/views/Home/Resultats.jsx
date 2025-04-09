@@ -68,22 +68,21 @@ export function Resultats() {
                 nouvelle forme.
               </Paragraphe>
 
-              <div className="md:hidden">
-                {showSecondPara ? (
+              <div className="md:hidden space-y-4">
+                {showSecondPara && (
                   <Paragraphe color="black">
                     Les premiers changements sont visibles rapidement, mais le
                     résultat définitif s'apprécie pleinement après 2 à 3 mois,
                     une fois que les tissus traités se sont assouplis et adaptés
                     à leur nouvelle forme.
                   </Paragraphe>
-                ) : (
-                  <button
-                    className="text-blue-600 underline"
-                    onClick={() => setShowSecondPara(true)}
-                  >
-                    Voir plus
-                  </button>
                 )}
+                <button
+                  onClick={() => setShowSecondPara((prev) => !prev)}
+                  className="bg-blue-600 text-white font-quicksand px-4 py-2 rounded-full transition-colors hover:bg-blue-700"
+                >
+                  {showSecondPara ? "Voir moins" : "Voir plus"}
+                </button>
               </div>
             </motion.div>
           </motion.div>
