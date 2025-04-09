@@ -24,7 +24,7 @@ export function Tarifs() {
           </Paragraphe>
         </motion.div>
 
-        <div className="justify-items-center">
+        <div className="flex justify-center">
           {[
             {
               title: "Essentielle",
@@ -51,49 +51,47 @@ export function Tarifs() {
                 ease: "easeInOut",
                 delay: index * 0.2,
               }}
-              className="w-full bg-white p-10 rounded-2xl shadow-lg cursor-pointer transition-transform flex flex-col items-center text-center"
+              className="w-[350px] bg-white p-8 rounded-2xl shadow-xl flex flex-col items-center text-center"
             >
-              <h4 className="font-oswald text-3xl mb-4 text-black">
+              <h4 className="font-oswald text-xl mb-1 text-black">
                 {box.title}
               </h4>
               <Paragraphe
                 color="black"
-                className="text-lg font-quicksand font-medium mb-2"
+                className="text-sm font-quicksand font-medium mb-1"
               >
                 À partir de
               </Paragraphe>
-              <span className="text-5xl font-semibold font-quicksand text-black mb-6">
+              <span className="text-4xl font-extrabold font-quicksand text-black mb-4">
                 {box.price}
               </span>
               <Paragraphe
                 color="black"
-                className="text-base font-quicksand font-medium mb-6 leading-relaxed max-w-xl"
+                className="text-sm font-quicksand font-medium mb-6 leading-relaxed"
               >
                 {box.description}
               </Paragraphe>
 
               <hr className="border-gray-200 w-full mb-6" />
-              <ul className="flex flex-col items-start gap-4 w-full mb-8 sm:flex-wrap sm:flex-row sm:justify-center sm:gap-6">
-                {" "}
+              <ul className="flex flex-col gap-4 w-full mb-6">
                 {box.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
+                  <li key={i} className="flex items-start gap-3">
                     <svg
-                      className="w-6 h-6 text-blue-500 flex-shrink-0"
+                      className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0"
                       viewBox="0 0 24 24"
                       fill="currentColor"
                     >
                       <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z" />
                     </svg>
-                    <span className="font-quicksand text-lg font-medium leading-snug text-left break-words">
+                    <span className="font-quicksand text-sm font-medium text-left break-words">
                       {item}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <hr className="border-gray-200 w-full mb-6" />
               <Button
-                className="w-full sm:w-auto bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-quicksand font-medium text-lg"
+                className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-quicksand font-medium text-sm"
                 text="Prendre Rendez-Vous"
               />
             </motion.article>
