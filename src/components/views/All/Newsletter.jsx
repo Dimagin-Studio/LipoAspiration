@@ -63,7 +63,7 @@ export function Newsletter() {
     >
       <div className="max-w-6xl mx-auto">
         <Title color="black" className="text-center">
-          Ne manquez aucune info !
+          Ne manquez aucune info !
         </Title>
 
         <Paragraphe
@@ -85,7 +85,6 @@ export function Newsletter() {
           )}
 
           <div className="flex flex-col sm:flex-row justify-center items-start sm:items-end gap-4 mt-6">
-            {/* Label visible */}
             <div className="w-full sm:w-auto flex flex-col">
               <label
                 htmlFor="email"
@@ -99,6 +98,7 @@ export function Newsletter() {
                 type="email"
                 id="email"
                 placeholder="ex : nom@email.com"
+                required
                 className="font-quicksand font-normal px-5 py-3 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all shadow-sm w-full sm:min-w-[300px]"
               />
             </div>
