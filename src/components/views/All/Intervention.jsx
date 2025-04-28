@@ -1,13 +1,10 @@
+import { motion } from "motion/react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
-import { motion } from "motion/react";
 
 export function Intervention() {
 	return (
-		<section
-			id="Intervention"
-			className="w-full px-4 py-16 sm:py-24 bg-[#E9EAEB]"
-		>
+		<section id="Cliniques" className="w-full px-4 py-16 sm:py-24 bg-[#E9EAEB]">
 			<div className="max-w-6xl mx-auto">
 				<div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-center">
 					<motion.div

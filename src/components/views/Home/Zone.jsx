@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import "animate.css";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
-import "animate.css";
 
 export function Zone() {
 	const zones = [
@@ -58,7 +58,7 @@ export function Zone() {
 		{
 			id: "culotte de cheval",
 			name: "CULOTTE DE CHEVAL",
-			image: "/images/Zone/culotte.jpeg",
+			image: "/images/Zone/culotte.png",
 			description:
 				"La liposuccion permet d’éliminer la graisse localisée de la culotte de cheval, offrant des jambes plus sculptées et une silhouette harmonieuse.",
 		},
@@ -95,7 +95,7 @@ export function Zone() {
 	};
 
 	return (
-		<section className="relative h-screen py-16 sm:py-24">
+		<section className="relative h-screen py-16 sm:py-24" id="Avantapres">
 			<div className="absolute inset-0">
 				<img
 					src={selectedZone.image}

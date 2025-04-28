@@ -129,8 +129,12 @@ export function Contacter() {
 										<option value="">
 											Merci de choisir un lieu d'intervention
 										</option>
-										<option value="rendez-vous">Paris</option>
-										<option value="information">Lyon</option>
+										<option value="rendez-vous">Liège</option>
+										<option value="information">Bruxelles</option>
+										<option value="">Charleroi</option>
+										<option value="">Binche</option>
+										<option value="">Mons</option>
+										<option value="">Autres</option>
 									</select>
 								</div>
 

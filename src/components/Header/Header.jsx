@@ -1,16 +1,16 @@
+import { Menu, X } from "lucide-react";
+import { motion } from "motion/react";
 import { useState } from "react";
 import { Button } from "../UI/Button";
-import { motion } from "motion/react";
-import { X, Menu } from "lucide-react";
 
 const links = [
 	{ href: "/", label: "Accueil" },
 	{ href: "/#Apropos", label: "À propos" },
-	{ href: "", label: "Zones Ciblés" },
-	{ href: "", label: "Intervention" },
-	{ href: "", label: "Prix" },
-	{ href: "", label: "FAQ" },
-	{ href: "", label: "Cliniques" },
+	{ href: "/#Avantapres", label: "Zones Ciblés" },
+	{ href: "/#Resultats", label: "Intervention" },
+	{ href: "/#Price", label: "Prix" },
+	{ href: "/#Faq", label: "FAQ" },
+	{ href: "/#Cliniques", label: "Cliniques" },
 ];
 
 export function Header({ className = "", color = "white" }) {
