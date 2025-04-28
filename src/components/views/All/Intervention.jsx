@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { addresses } from "../../../constants/addresses";
 import { Title } from "../../UI/Title";
 import { Paragraphe } from "../../UI/paragraphe";
 
@@ -30,7 +31,7 @@ export function Intervention() {
 						transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
 					>
 						<Title color="black" className="uppercase">
-							Nos lieux d’intervention et de consultation
+							Nos lieux d'intervention et de consultation
 						</Title>
 						<div className="space-y-6">
 							<Paragraphe color="black">
@@ -41,37 +42,17 @@ export function Intervention() {
 								confidentialité. Chaque lieu a été sélectionné pour offrir un
 								environnement sûr, rassurant et accessible.
 							</Paragraphe>
-							{/* <Paragraphe color="black">
-								<span className="font-bold">
-									Clinique Esthétique Parisienne
-								</span>
-								<br />
-								45 Rue de la Santé, 75013 Paris, France
-							</Paragraphe>
-							<Paragraphe color="black">
-								<span className="font-bold">
-									Centre Médical de Chirurgie Esthétique Lyon
-								</span>
-								<br />
-								120 Avenue de la République, 69003 Lyon, France
-							</Paragraphe> */}
-							<Paragraphe color="black">
-								<span className="font-bold">Espace Médical Rogier</span>
-								<br />
-								28 Avenue Rogier, 4000 Liège
-							</Paragraphe>
-							<Paragraphe color="black">
-								199 Avenue Louise, 1000 Bruxelles
-							</Paragraphe>
-							<Paragraphe color="black">
-								34 Rue du Wairchat, 6240 Fariciennes
-							</Paragraphe>
-							<Paragraphe color="black">
-								34 Rue Grande, 7330 Saint-Ghislain
-							</Paragraphe>
-							<Paragraphe color="black">
-								4 Rue Ferrer, 6567 Merbes-Le-Château
-							</Paragraphe>
+							{addresses.map((item, index) => (
+								<Paragraphe key={index} color="black">
+									{item.name && (
+										<>
+											<span className="font-bold">{item.name}</span>
+											<br />
+										</>
+									)}
+									{item.address}
+								</Paragraphe>
+							))}
 						</div>
 					</motion.div>
 				</div>

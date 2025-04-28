@@ -1,17 +1,8 @@
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { links } from "../../constants/links";
 import { Button } from "../UI/Button";
-
-const links = [
-	{ href: "/", label: "Accueil" },
-	{ href: "/#Apropos", label: "À propos" },
-	{ href: "/#Avantapres", label: "Zones Ciblés" },
-	{ href: "/#Resultats", label: "Intervention" },
-	{ href: "/#Price", label: "Prix" },
-	{ href: "/#Faq", label: "FAQ" },
-	{ href: "/#Cliniques", label: "Cliniques" },
-];
 
 export function Header({ className = "", color = "white" }) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,24 +55,11 @@ export function Header({ className = "", color = "white" }) {
 					>
 						<X className="w-8 h-8" />
 					</button>
-					<a href="/" onClick={() => setIsMenuOpen(false)}>
-						Accueil
-					</a>
-					<a href="/#Apropos" onClick={() => setIsMenuOpen(false)}>
-						À propos
-					</a>
-					<a href="/#Avantapres" onClick={() => setIsMenuOpen(false)}>
-						Avant/Après
-					</a>
-					<a href="/#Resultats" onClick={() => setIsMenuOpen(false)}>
-						Comment ça marche ?
-					</a>
-					<a href="/#Price" onClick={() => setIsMenuOpen(false)}>
-						Nos prix
-					</a>
-					<a href="/#Faq" onClick={() => setIsMenuOpen(false)}>
-						Faqs
-					</a>
+					{links.map((link) => (
+						<a href={link.href} onClick={() => setIsMenuOpen(false)}>
+							{link.label}
+						</a>
+					))}
 
 					<Button text="Prendre Rendez-vous" />
 				</div>

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -5,7 +6,8 @@ import {
 	FaTiktok,
 	FaXTwitter,
 } from "react-icons/fa6";
-import { motion } from "motion/react";
+import { addresses } from "../../constants/addresses";
+import { links } from "../../constants/links";
 
 export function Footer() {
 	const columns = [
@@ -53,17 +55,10 @@ export function Footer() {
 				>
 					<h3 className="text-white font-semibold mb-4">Liens</h3>
 					<ul className="space-y-2 text-gray-400 text-sm">
-						{[
-							"À propos",
-							"Avant / Après",
-							"Indications",
-							"Nos prix",
-							"FAQS",
-							"Clients",
-						].map((link, i) => (
+						{links.map((link, i) => (
 							<li key={i}>
-								<a href="#" className="hover:text-white">
-									{link}
+								<a href={link.href} className="hover:text-white">
+									{link.label}
 								</a>
 							</li>
 						))}
@@ -97,24 +92,27 @@ export function Footer() {
 					transition={{ duration: 0.4, delay: 0.3 }}
 				>
 					<h3 className="text-white font-semibold mb-4">Adresses</h3>
-					<div className="text-gray-400 text-sm mb-4">
-						<p className="font-bold text-white">
-							Clinique Esthétique Parisienne
-						</p>
-						<p>45 Rue de la Santé, 75013 Paris, France</p>
-					</div>
-					<div className="text-gray-400 text-sm">
-						<p className="font-bold text-white">
-							Centre Médical de Chirurgie Esthétique
-						</p>
-						<p>120 Avenue de la République, 69003 Lyon, France</p>
+					<div className="text-gray-400 text-sm mb-4 space-y-2">
+						{addresses.map((address, i) => (
+							<p key={i}>{address.address}</p>
+						))}
 					</div>
 				</motion.div>
 			</div>
 
 			<div className="border-t border-gray-700 mt-12 pt-6 px-4 flex flex-col sm:flex-row items-center justify-between">
 				<p className="text-sm text-gray-500">© 2025 - LIPOASPIRATION.BE</p>
-				<p className="text-sm text-gray-500">Design & developed by Dimagin</p>
+				<p className="text-sm text-gray-500">
+					Design & developed by{" "}
+					<a
+						href="https://dimagin.be"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="hover:text-white"
+					>
+						Dimagin
+					</a>
+				</p>
 
 				<div className="flex space-x-4 mt-4 sm:mt-0">
 					{[FaInstagram, FaPinterest, FaFacebookF, FaTiktok, FaXTwitter].map(
