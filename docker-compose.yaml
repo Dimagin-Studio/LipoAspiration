@@ -1,6 +1,8 @@
 services:
   lipoaspiration:
     image: dimagin/lipoaspiration:latest
+    pull_policy: always
+    restart: unless-stopped
     networks:
       - traefik-network
     labels:
