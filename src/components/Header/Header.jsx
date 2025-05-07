@@ -16,35 +16,47 @@ export function Header({ className = "", color = "white" }) {
 		>
 			<a href="/" className="flex-shrink-0">
 				<img
-					src="/images/lotus.png"
+					src="/images/logo_liposuccion_white.png"
 					alt="Logo"
-					className="w-[80px] sm:w-[100px]"
+					className="h-[30px] lg:h-[40px]"
 				/>
 			</a>
 			<nav className="hidden md:flex flex-1 items-center font-normal">
 				<div className="flex-1 flex justify-center">
 					<ul
-						className={`flex items-center space-x-4 lg:space-x-8 font-quicksand text-base lg:text-lg ${
+						className={`flex items-center gap-4 lg:gap-8 font-quicksand text-base lg:text-lg ${
 							color === "black" ? "text-black" : "text-white"
 						}`}
 					>
-						{links.map((link) => (
-							<li key={link.href}>
-								<a href={link.href} className="hover:text-gray-300">
-									{link.label}
-								</a>
-							</li>
-						))}
+						{links.map((link) => {
+							const lessImportantLinks = [
+								"À propos",
+								"Zones Ciblés",
+								"Intervention",
+							];
+							const isLessImportant = lessImportantLinks.includes(link.label);
+							return (
+								<li
+									key={link.href}
+									className={`${isLessImportant ? "hidden xl:block" : ""}`}
+								>
+									<a href={link.href} className="hover:text-gray-300">
+										{link.label}
+									</a>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 				<Button text="Prendre Rendez-vous" />
 			</nav>
 			{!isMenuOpen && (
-				<button
-					onClick={() => setIsMenuOpen(true)}
-					className="md:hidden text-black z-50"
-				>
-					<Menu className="w-8 h-8 text-white stroke-black" />
+				<button onClick={() => setIsMenuOpen(true)} className="md:hidden z-50">
+					<Menu
+						className={`w-8 h-8 ${
+							color === "black" ? "text-black" : "text-white"
+						}`}
+					/>
 				</button>
 			)}
 			{isMenuOpen && (

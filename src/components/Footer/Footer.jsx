@@ -28,9 +28,9 @@ export function Footer() {
 				>
 					<div className="mb-4">
 						<img
-							src="/images/lotus.png"
+							src="/images/logo_liposuccion_white.png"
 							alt="Logo"
-							className="w-[80px] sm:w-[100px]"
+							className="h-[30px] lg:h-[40px]"
 						/>
 					</div>
 					<p className="text-sm text-gray-400 mb-6">
