@@ -77,7 +77,7 @@ export function Contacter() {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <img
-              src="images/equipe/member5.jpeg"
+              src="images/equipe/rendez-vous2.jpg"
               alt="contact"
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />
