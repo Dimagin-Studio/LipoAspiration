@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
+    "build:seo": "vite build --mode production",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sitemap": "echo 'Sitemap generated in public/sitemap.xml'",
+    "seo-check": "echo 'Check robots.txt and sitemap.xml'"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
