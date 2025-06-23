@@ -4,19 +4,19 @@
   
   <!-- Page d'accueil -->
   <url>
-    <loc>https://lipoaspiration.be/</loc>
+    <loc>https://liposuccion.be/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://lipoaspiration.be/images/hero.jpeg</image:loc>
+      <image:loc>https://liposuccion.be/images/hero.jpeg</image:loc>
       <image:title>Liposuccion Belgique - Experts en chirurgie esthétique</image:title>
     </image:image>
   </url>
   
   <!-- Page contact -->
   <url>
-    <loc>https://lipoaspiration.be/contact</loc>
+    <loc>https://liposuccion.be/contact</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -24,42 +24,42 @@
   
   <!-- Sections importantes (ancres) -->
   <url>
-    <loc>https://lipoaspiration.be/#Apropos</loc>
+    <loc>https://liposuccion.be/#Apropos</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://lipoaspiration.be/#Avantapres</loc>
+    <loc>https://liposuccion.be/#Avantapres</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://lipoaspiration.be/#Resultats</loc>
+    <loc>https://liposuccion.be/#Resultats</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://lipoaspiration.be/#Price</loc>
+    <loc>https://liposuccion.be/#Price</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://lipoaspiration.be/#Faq</loc>
+    <loc>https://liposuccion.be/#Faq</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lipoaspiration.be/#Cliniques</loc>
+    <loc>https://liposuccion.be/#Cliniques</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -12,7 +12,7 @@ export function Contact() {
     <>
       <Helmet>
         <title>
-          Contact - Consultation Liposuccion Belgique | LipoAspiration.be
+          Contact - Consultation Liposuccion Belgique | Liposuccion.be
         </title>
         <meta
           name="description"
@@ -22,19 +22,19 @@ export function Contact() {
           name="keywords"
           content="contact liposuccion, consultation gratuite, rendez-vous chirurgie esthétique, devis lipoaspiration belgique"
         />
-        <link rel="canonical" href="https://lipoaspiration.be/contact" />
+        <link rel="canonical" href="https://liposuccion.be/contact" />
 
         {/* Schema.org pour la page contact */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact LipoAspiration.be",
+            name: "Contact Liposuccion.be",
             description: "Contactez nos experts en liposuccion",
-            url: "https://lipoaspiration.be/contact",
+            url: "https://liposuccion.be/contact",
             mainEntity: {
               "@type": "MedicalBusiness",
-              name: "LipoAspiration.be",
+              name: "Liposuccion.be",
               address: {
                 "@type": "PostalAddress",
                 addressCountry: "BE",

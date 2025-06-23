@@ -1,4 +1,4 @@
-# Guide de Déploiement SEO - LipoAspiration.be
+# Guide de Déploiement SEO - Liposuccion.be
 
 ## ✅ Améliorations SEO Implémentées
 
@@ -35,7 +35,7 @@ npm run build:seo
 #### A. Google Search Console
 
 1. Ajouter le site dans Google Search Console
-2. Soumettre le sitemap : `https://lipoaspiration.be/sitemap.xml`
+2. Soumettre le sitemap : `https://liposuccion.be/sitemap.xml`
 3. Tester l'indexation des pages principales
 
 #### B. Tests SEO Essentiels
@@ -49,10 +49,10 @@ npm run build:seo
 
 ```bash
 # Vérifier robots.txt
-curl https://lipoaspiration.be/robots.txt
+curl https://liposuccion.be/robots.txt
 
 # Vérifier sitemap.xml
-curl https://lipoaspiration.be/sitemap.xml
+curl https://liposuccion.be/sitemap.xml
 ```
 
 ### 3. Configuration Serveur Web

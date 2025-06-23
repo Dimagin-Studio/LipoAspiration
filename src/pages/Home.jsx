@@ -22,7 +22,7 @@ export function Home() {
     <>
       <Helmet>
         <title>
-          Liposuccion Belgique - Chirurgie Esthétique Expert | LipoAspiration.be
+          Liposuccion Belgique - Chirurgie Esthétique Expert | Liposuccion.be
         </title>
         <meta
           name="description"
@@ -32,18 +32,18 @@ export function Home() {
           name="keywords"
           content="liposuccion belgique, lipoaspiration, chirurgie esthétique, graisse localisée, ventre, hanches, cuisses, bras, résultats naturels"
         />
-        <link rel="canonical" href="https://lipoaspiration.be/" />
+        <link rel="canonical" href="https://liposuccion.be/" />
 
         {/* Schema.org structured data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
-            name: "LipoAspiration.be",
+            name: "Liposuccion.be",
             description: "Spécialistes de la liposuccion en Belgique",
-            url: "https://lipoaspiration.be",
-            logo: "https://lipoaspiration.be/images/logo_liposuccion.png",
-            image: "https://lipoaspiration.be/images/hero.jpeg",
+            url: "https://liposuccion.be",
+            logo: "https://liposuccion.be/images/logo_liposuccion.png",
+            image: "https://liposuccion.be/images/hero.jpeg",
             telephone: "+32-XXX-XXX-XXX",
             address: {
               "@type": "PostalAddress",
