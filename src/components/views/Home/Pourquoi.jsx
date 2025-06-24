@@ -14,21 +14,42 @@ export function Pourquoi() {
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <Title color="black">Pourquoi nous faire confiance?</Title>
+            <Title color="black">
+              Pourquoi choisir notre équipe pour votre liposuccion ?
+            </Title>
             <div className="space-y-6 mb-6">
               <Paragraphe color="black">
-                La liposuccion est une solution efficace pour éliminer
-                durablement les graisses localisées qui résistent aux régimes et
-                au sport. Grâce aux techniques modernes, l’intervention est plus
-                précise, la récupération rapide et les résultats naturels.
+                Opter pour notre équipe, c’est faire le choix de la sécurité, de
+                l’expertise et de l’accompagnement sur-mesure à chaque étape de
+                votre liposuccion.
+              </Paragraphe>
+              <ul className="space-y-4">
+                <li className="font-quicksand text-lg">
+                  <strong>Des chirurgiens spécialisés</strong> et expérimentés
+                </li>
+                <li className="font-quicksand text-lg">
+                  <strong>Des technologies de pointe</strong> pour des résultats
+                  naturels et durables
+                </li>
+                <li className="font-quicksand text-lg">
+                  <strong>Un suivi personnalisé</strong> avant, pendant et après
+                  l’intervention
+                </li>
+                <li className="font-quicksand text-lg">
+                  <strong>Une approche humaine</strong> axée sur l’écoute, la
+                  transparence et votre bien-être
+                </li>
+              </ul>
+              <Paragraphe color="black">
+                Votre confort, votre sécurité et votre satisfaction sont nos
+                priorités absolues.
               </Paragraphe>
               <Paragraphe color="black">
-                En choisissant notre équipe, vous bénéficiez de l’expertise de
-                chirurgiens spécialisés, d’un accompagnement personnalisé et
-                d’un suivi attentif à chaque étape. Nous utilisons des
-                technologies de pointe pour garantir votre confort, votre
-                sécurité et des résultats harmonieux, adaptés à votre
-                silhouette.
+                <strong>
+                  Contactez-nous pour un accompagnement sur-mesure et découvrez
+                  comment la liposuccion peut transformer votre silhouette en
+                  toute confiance.
+                </strong>
               </Paragraphe>
             </div>
             <motion.div

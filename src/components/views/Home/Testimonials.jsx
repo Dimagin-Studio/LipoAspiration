@@ -9,30 +9,30 @@ export function Testimonials() {
   const steps = [
     {
       id: 1,
-      title: "Prise de contact / Avis",
+      title: "Première consultation",
       description:
-        "Une consultation est indispensable pour analyser votre situation, vous informer en toute transparence et définir un traitement personnalisé, en vous laissant le temps de réfléchir sereinement.",
+        "Lors de ce premier rendez-vous, le chirurgien analyse votre situation, écoute vos attentes et vous informe en toute transparence sur les possibilités, les risques et les limites de la liposuccion. Un temps de réflexion est toujours respecté avant toute décision.",
       image: "/images/testimonials/etape1.jpeg",
     },
     {
       id: 2,
       title: "Consultation pré-opératoire",
       description:
-        "Le médecin évalue les zones concernées, explique le déroulement de l’intervention et réalise des photos médicales. Cette étape permet d’établir un plan personnalisé et de répondre à toutes vos questions.",
+        "Un examen clinique détaillé est réalisé, complété par des bilans sanguins et, si nécessaire, une consultation avec l’anesthésiste. Le chirurgien définit un plan de traitement personnalisé, prend des photos médicales et répond à toutes vos questions pour garantir votre sécurité et votre sérénité.",
       image: "/images/testimonials/etape2.png",
     },
     {
       id: 3,
       title: "Intervention",
       description:
-        "La liposuccion est réalisée dans un environnement médical sécurisé. L’intervention est adaptée à votre morphologie et utilise des techniques modernes pour garantir un résultat naturel et une récupération optimale.",
+        "La liposuccion est pratiquée dans un environnement médical sécurisé, avec des techniques modernes adaptées à votre morphologie pour un résultat naturel et une récupération optimale. L’intervention peut se dérouler sous anesthésie locale ou générale selon les zones traitées.",
       image: "/images/testimonials/etape3.jpeg",
     },
     {
       id: 4,
-      title: "Consultation de suivi",
+      title: "Suivi post-opératoire",
       description:
-        "Un rendez-vous post-opératoire est prévu pour évaluer votre récupération, répondre à vos questions et garantir un résultat optimal.",
+        "Un rendez-vous de suivi est systématiquement prévu pour évaluer votre récupération, ajuster les soins si besoin et garantir un résultat optimal. Le chirurgien reste disponible pour répondre à toutes vos questions durant la convalescence.",
       image: "/images/testimonials/etape4.jpg",
     },
   ];
@@ -59,10 +59,10 @@ export function Testimonials() {
           className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12"
         >
           <div className="mb-6 md:mb-0">
-            <Title color="black">DÉROULEMENT DE LA SÉANCE</Title>
-            <Paragraphe color="black">
-              Un processus en 4 étapes pour une transformation en toute sérénité
-            </Paragraphe>
+            <Title color="black">
+              Déroulement d’une liposuccion : les 4 étapes clés pour une
+              transformation en toute confiance
+            </Title>
           </div>
           <motion.div
             initial={{ opacity: 0 }}

@@ -46,34 +46,44 @@ export function Infos() {
       >
         <div className="md:w-1/3">
           <Title color="black">
-            La Liposuccion : Une solution ciblée pour un corps redessiné
+            Liposuccion : Remodeler votre silhouette de façon ciblée et durable
           </Title>
         </div>
 
         <div className="md:w-2/3 space-y-8">
           <div className="space-y-6 text-gray-700 font-quicksand text-lg">
+            <h3 className="text-2xl font-bold">
+              Qu’est-ce que la liposuccion ?
+            </h3>
             <Paragraphe color="black">
-              La liposuccion, également appelée lipoaspiration ou liposculpture,
-              est une intervention chirurgicale esthétique visant à éliminer les
-              dépôts de graisse localisés. Elle permet de remodeler certaines
-              zones du corps en aspirant les excès de graisse résistants aux
-              méthodes classiques comme le régime et l’exercice physique.
+              La liposuccion, aussi appelée lipoaspiration ou liposculpture, est
+              une intervention de chirurgie esthétique qui vise à retirer de
+              manière définitive les excès de graisse localisés. Cette technique
+              permet de cibler précisément les zones rebelles du corps – ventre,
+              hanches, cuisses, bras – pour obtenir une silhouette harmonieuse
+              et affinée, là où régime et sport restent inefficaces.
             </Paragraphe>
 
+            <h3 className="text-2xl font-bold">
+              Les avantages de la liposuccion moderne
+            </h3>
             <Paragraphe color="black" className="hidden md:block">
-              Développée dans les années 1970, la liposuccion a connu une
-              évolution majeure, devenant une procédure de plus en plus précise
-              et moins invasive. Aujourd’hui, les techniques modernes offrent
-              des résultats naturels et une récupération plus rapide, tout en
-              garantissant un confort optimal.
+              Grâce aux avancées médicales depuis les années 1970, la
+              liposuccion est aujourd’hui plus sûre, moins invasive et offre des
+              résultats naturels. Les techniques actuelles garantissent un
+              confort optimal, une récupération rapide et des cicatrices
+              minimes, pour une expérience patient améliorée.
             </Paragraphe>
 
+            <h3 className="text-2xl font-bold">
+              Liposuccion : pour qui et dans quel objectif ?
+            </h3>
             <Paragraphe color="black" className="hidden md:block">
-              Il est important de noter que la liposuccion ne doit pas être
-              considérée comme une solution de perte de poids. Son objectif est
-              de traiter des zones spécifiques de graisse excédentaire qui ne
-              disparaissent pas avec l’alimentation ou l’exercice, et qui ne
-              reviendront pas après leur élimination.
+              La liposuccion ne remplace pas un régime ou une activité physique
+              régulière. Elle s’adresse aux personnes proches de leur poids
+              idéal souhaitant éliminer des amas graisseux persistants. Il
+              s’agit d’une solution ciblée et durable pour redéfinir les
+              contours du corps, et non d’une méthode d’amaigrissement globale.
             </Paragraphe>
 
             <div className="md:hidden space-y-4">
