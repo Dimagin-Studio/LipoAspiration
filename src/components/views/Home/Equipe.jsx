@@ -41,7 +41,10 @@ export function Equipe() {
   ];
 
   return (
-    <section className="container mx-auto px-4 py-16 sm:py-24">
+    <section
+      id="Intervenants"
+      className="container mx-auto px-4 py-16 sm:py-24"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12"

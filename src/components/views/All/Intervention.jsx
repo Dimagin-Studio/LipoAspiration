@@ -5,7 +5,7 @@ import { Paragraphe } from "../../UI/paragraphe";
 
 export function Intervention() {
   return (
-    <section id="Cliniques" className="w-full px-4 py-16 sm:py-24 bg-[#E9EAEB]">
+    <section className="w-full px-4 py-16 sm:py-24 bg-[#E9EAEB]">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-20 items-center">
           <motion.div
