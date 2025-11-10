@@ -9,7 +9,6 @@ export function Contacter() {
     email: "",
     telephone: "",
     sujet: "",
-    lieux: "",
     message: "",
   });
 
@@ -52,7 +51,6 @@ export function Contacter() {
           email: "",
           telephone: "",
           sujet: "",
-          lieux: "",
           message: "",
         });
       })
@@ -214,7 +212,7 @@ export function Contacter() {
                     <option value="autres">Autres</option>
                   </select>
                 </div>
-                <div className="flex flex-col">
+                {/* <div className="flex flex-col">
                   <label
                     htmlFor="lieux"
                     className="text-gray-700 font-medium mb-2 font-quicksand"
@@ -239,7 +237,7 @@ export function Contacter() {
                     <option value="Mons">Mons</option>
                     <option value="Autres">Autres</option>
                   </select>
-                </div>
+                </div> */}
 
                 <div className="flex flex-col">
                   <label
